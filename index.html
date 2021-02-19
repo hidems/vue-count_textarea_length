@@ -13,10 +13,20 @@
 
 <body>
     <div id="app">
+        <h1>Count Character</h1>
         <form id="post_form">
             <textarea cols="20" rows="2" v-model="postcomment" ></textarea>
             <small id="rem" v-bind:style="{color: computedColor}">
                 残り{{textAreaLength}}文字
+            </small>
+        </form>
+
+        <hr>
+        <h1>Count Byte</h1>
+        <form id="post_form">
+            <textarea cols="20" rows="2" v-model="byte" ></textarea>
+            <small id="rem">
+                {{countByte}}
             </small>
         </form>
     </div>

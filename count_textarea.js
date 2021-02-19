@@ -1,7 +1,8 @@
 var vm = new Vue({
   el: '#app',
   data: {
-    postcomment: ''
+    postcomment: '',
+    byte: ''
   },
   computed: {
     textAreaLength: function () {
@@ -16,6 +17,9 @@ var vm = new Vue({
         col = '#a33';
       }
       return col;
+    },
+    countByte: function () {
+      return (new Blob([this.byte])).size;
     }
   }
 })
